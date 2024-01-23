@@ -1,14 +1,41 @@
 import { motion } from 'framer-motion';
 
+// scropping effect
+// const parent = {
+//   hidden: { x: 0, y: 0, opacity: 0 },
+//   visible: {
+//     y: [0, 300, -300, 0],
+//     x: [0, 300, -300, 0],
+//     opacity: 1,
+//     transition: {
+//       ease: 'linear',
+//       duration: 5,
+//       opacity: {
+//         repeat: Infinity,
+//         duration: 0.2,
+//       },
+//     },
+//   },
+// };
+
 const parent = {
-  hidden: { opacity: 0, scale: 0.9, x: 0 },
+  hidden: { x: 0, y: 0, opacity: 0 },
   visible: {
-    x: 300,
-    opacity: 0.6,
-    scale: 1,
+    y: [0, 300, -300, 0],
+    x: [0, 300, -300, 0],
+    rotate: [0, 300, -300, 0],
+    opacity: 1,
     transition: {
-      ease: 'easeInOut',
-      duration: 0.5,
+      ease: 'linear',
+      duration: 5,
+      repeat: Infinity,
+      opacity: {
+        duration: 0.5,
+      },
+      rotate: {
+        delay: 1,
+        repeat: Infinity,
+      },
     },
   },
 };
