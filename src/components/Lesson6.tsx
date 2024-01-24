@@ -19,12 +19,12 @@ const Lesson6 = () => {
   //   }
   // };
   useEffect(() => {
-    controls.start((i) => ({ x: 200, transition: { delay: i * 2 } }));
+    controls.start((i) => ({ x: 200, transition: { delay: i * 0.5 } }));
   }, []);
 
   return (
     <div
-      onClick={() => controls.stop()}
+      onMouseEnter={() => controls.stop()}
       className="border border-red-500 size-[500px] flex flex-col justify-center items-center"
     >
       {/* <button onClick={handleToggle} className="bg-green-500 px-2 py-3 mb-10">
